@@ -13,11 +13,11 @@ public class ToSeconds {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter hours:");
-        int hours = Integer.valueOf(scanner.nextLine());
+        int hours = scanner.nextInt();
         System.out.println("enter minutes:");
-        int minutes = Integer.valueOf(scanner.nextLine());
+        int minutes = scanner.nextInt();
         System.out.println("enter seconds:");
-        int seconds = Integer.valueOf(scanner.nextLine());
+        int seconds = scanner.nextInt();
         final int FUNNY_NUMBER = 60;
         
         
