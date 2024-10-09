@@ -20,7 +20,7 @@ public class BirthCertificateNumber​​ {
        //processing
         String bcn = String.format("%06d%04d", firstPart, secondPart);
         if (bcn.length() != 10) {
-            System.out.println("A birth certificate number has to have 10 characters");
+            System.out.println("This birth certificate number is not valid.");
             return;
         }
         long nineNumbers = Long.parseLong(bcn.substring(0, 9));
