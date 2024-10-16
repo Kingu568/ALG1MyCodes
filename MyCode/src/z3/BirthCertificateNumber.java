@@ -20,7 +20,7 @@ public class BirthCertificateNumber​​ {
        //processing
         String bcn = String.format("%06d%04d", firstPart, secondPart);
         if (bcn.length() != 10) {
-            System.out.println("This birth certificate number is not valid.");
+            System.out.println("This birth certificate number is not valid. 1");
             return;
         }
         long nineNumbers = Long.parseLong(bcn.substring(0, 9));
@@ -32,14 +32,14 @@ public class BirthCertificateNumber​​ {
             if (lastNumber == 0) {
                 System.out.println("This birth certificate number is valid.");
             } else {
-                System.out.println("This birth certificate number is not valid.");
+                System.out.println("This birth certificate number is not valid. 2");
             }
         } else {
             
             if (lastNumber == remainder) {
                 System.out.println("This birth certificate number is valid.");
             } else {
-                System.out.println("This birth certificate number is not valid.");
+                System.out.println("This birth certificate number is not valid. 3");
             }
         }
     }
