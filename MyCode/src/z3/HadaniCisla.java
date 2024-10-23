@@ -31,6 +31,7 @@ public class HadaniCisla {
                 case 2: userGuesses(); break;
                 case 3: setRange(); break;
                 case 4: gaming=false; break;
+                default:System.out.println("Invalid choice...");break;
             }
     
     }
@@ -50,12 +51,13 @@ public class HadaniCisla {
     
     
     public static void computerGuesses() {
+        boolean compGaming = true;
         int low = min;
         int high = max;
         int attempts = 0;
 
         System.out.println("Think of a number between " + min + " and " + max + ". The computer will guess it.");
-        while (true) {
+        while (compGaming) {
             int mid = low + (high - low) / 2;
             attempts++;
             System.out.println("The computer guesses: " + mid);
@@ -65,15 +67,20 @@ public class HadaniCisla {
             System.out.print("Choose: ");
             int response = sc.nextInt();
 
-            if (response == 1) {
+            switch (response) {
+                case 1:
                 System.out.println("The computer guessed the number " + mid + " in " + attempts + " attempts.");
+                compGaming = false;
                 break;
-            } else if (response == 2) {
+                case 2:
                 high = mid - 1;
-            } else if (response == 3) {
+                break;
+                case 3:
                 low = mid + 1;
-            } else {
+                break;
+                default:
                 System.out.println("Invalid choice. Please try again.");
+                break;
             }
         }
     }
